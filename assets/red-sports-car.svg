@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" role="img" aria-label="h дь t">
+  <defs>
+    <linearGradient id="carPaint" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#b3001b"/>
+      <stop offset="35%" stop-color="#e4002b"/>
+      <stop offset="70%" stop-color="#ff2d2d"/>
+      <stop offset="100%" stop-color="#b3001b"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bfe9ff" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#3a6b8a" stop-opacity="0.85"/>
+    </linearGradient>
+    <radialGradient id="wheelShine" cx="35%" cy="35%" r="70%">
+      <stop offset="0%" stop-color="#777" stop-opacity="0.9"/>
+      <stop offset="55%" stop-color="#2b2b2b" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#111" stop-opacity="1"/>
+    </radialGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="8" result="blur"/>
+      <feOffset dx="0" dy="10" result="offsetBlur"/>
+      <feColorMatrix in="offsetBlur" type="matrix"
+        values="0 0 0 0 0
+                0 0 0 0 0
+                0 0 0 0 0
+                0 0 0 0.35 0" result="shadowColor"/>
+      <feMerge>
+        <feMergeNode in="shadowColor"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- background -->
+  <rect width="1200" height="600" fill="#0b0f14"/>
+  <g opacity="0.55">
+    <circle cx="150" cy="120" r="2.2" fill="#ffffff"/>
+    <circle cx="280" cy="70" r="1.7" fill="#ffffff"/>
+    <circle cx="520" cy="90" r="1.9" fill="#ffffff"/>
+    <circle cx="790" cy="60" r="2.0" fill="#ffffff"/>
+    <circle cx="1030" cy="110" r="1.6" fill="#ffffff"/>
+    <circle cx="1120" cy="80" r="2.1" fill="#ffffff"/>
+  </g>
+
+  <!-- ground -->
+  <path d="M0 430 C 220 410, 360 470, 600 450 C 860 428, 980 520, 1200 480 L 1200 600 L 0 600 Z"
+        fill="#0f1a24"/>
+  <path d="M120 470 C 380 440, 520 520, 820 495 C 980 482, 1060 535, 1140 515"
+        fill="none" stroke="#1b2b3a" stroke-width="14" stroke-linecap="round" opacity="0.8"/>
+
+  <!-- car -->
+  <g filter="url(#shadow)">
+    <!-- underglow -->
+    <ellipse cx="600" cy="448" rx="410" ry="50" fill="#ff2d2d" opacity="0.16"/>
+    <ellipse cx="600" cy="452" rx="340" ry="34" fill="#ff2d2d" opacity="0.10"/>
+
+    <!-- body main -->
+    <path d="M210 410
+             C 250 360, 335 325, 450 318
+             C 520 250, 640 235, 740 248
+             C 820 258, 890 290, 940 330
+             C 1010 340, 1060 365, 1085 405
+             C 1095 420, 1095 440, 1086 452
+             C 1075 465, 1050 472, 1010 474
+             L 280 474
+             C 235 474, 205 463, 190 447
+             C 175 431, 180 418, 210 410 Z"
+          fill="url(#carPaint)" stroke="#7a0011" stroke-width="6" />
+
+    <!-- hood highlight -->
+    <path d="M330 408
+             C 410 345, 520 320, 650 324
+             C 720 326, 780 340, 840 370
+             C 740 368, 620 382, 470 420
+             C 395 438, 350 434, 330 408 Z"
+          fill="#ffffff" opacity="0.10"/>
+
+    <!-- roof -->
+    <path d="M520 320
+             C 565 270, 650 258, 725 270
+             C 770 277, 805 295, 830 320
+             C 760 326, 670 332, 560 336
+             C 540 336, 526 332, 520 320 Z"
+          fill="#8b0014" opacity="0.65"/>
+
+    <!-- windows -->
+    <path d="M555 318
+             C 590 285, 650 278, 710 287
+             C 745 293, 775 306, 795 322
+             C 720 330, 635 334, 575 334
+             C 560 334, 552 328, 555 318 Z"
+          fill="url(#glass)" stroke="#183444" stroke-width="5"/>
+    <path d="M705 292
+             C 725 290, 748 296, 770 308
+             C 758 323, 735 333, 710 336
+             C 720 318, 719 304, 705 292 Z"
+          fill="#6bb7d8" opacity="0.25"/>
+
+    <!-- side intake -->
+    <path d="M790 410
+             C 840 385, 910 385, 960 404
+             C 938 432, 850 440, 790 432
+             C 780 428, 780 416, 790 410 Z"
+          fill="#2a0b10" opacity="0.85"/>
+    <path d="M805 414
+             C 845 398, 900 398, 940 410
+             C 918 424, 860 428, 815 424 Z"
+          fill="#000000" opacity="0.35"/>
+
+    <!-- front bumper -->
+    <path d="M210 410
+             C 250 405, 280 418, 292 444
+             C 250 455, 215 450, 190 447
+             C 175 431, 180 418, 210 410 Z"
+          fill="#7a0011" opacity="0.85"/>
+
+    <!-- headlight -->
+    <path d="M265 412
+             C 300 405, 330 410, 350 420
+             C 332 440, 292 450, 262 446
+             C 252 438, 252 420, 265 412 Z"
+          fill="#e9f7ff" opacity="0.95" stroke="#9fd7f2" stroke-width="4"/>
+    <path d="M278 420 C 305 416, 320 418, 336 424 C 318 435, 294 441, 272 438"
+          fill="#8bd3ff" opacity="0.25"/>
+
+    <!-- taillight -->
+    <path d="M965 408
+             C 988 402, 1010 407, 1026 418
+             C 1012 438, 986 448, 962 444
+             C 954 436, 955 416, 965 408 Z"
+          fill="#ff3b3b" opacity="0.95" stroke="#a30010" stroke-width="4"/>
+    <path d="M976 416 C 995 412, 1008 414, 1018 420 C 1004 432, 988 438, 972 436"
+          fill="#ffd1d1" opacity="0.25"/>
+
+    <!-- door line -->
+    <path d="M520 342
+             C 470 360, 430 392, 410 432
+             C 405 450, 420 466, 450 474"
+          fill="none" stroke="#5f0010" stroke-width="6" opacity="0.7"/>
+    <path d="M680 338
+             C 740 354, 770 384, 785 420
+             C 792 442, 780 463, 750 474"
+          fill="none" stroke="#5f0010" stroke-width="6" opacity="0.7"/>
+
+    <!-- wheels -->
+    <g>
+      <circle cx="360" cy="470" r="78" fill="#0a0a0a"/>
+      <circle cx="360" cy="470" r="64" fill="url(#wheelShine)"/>
+      <circle cx="360" cy="470" r="42" fill="#1b1b1b"/>
+      <circle cx="360" cy="470" r="10" fill="#bdbdbd"/>
+      <g stroke="#9a9a9a" stroke-width="6" stroke-linecap="round" opacity="0.85">
+        <line x1="360" y1="428" x2="360" y2="452"/>
+        <line x1="402" y1="470" x2="378" y2="470"/>
+        <line x1="360" y1="512" x2="360" y2="488"/>
+        <line x1="318" y1="470" x2="342" y2="470"/>
+        <line x1="390" y1="440" x2="374" y2="456"/>
+        <line x1="390" y1="500" x2="374" y2="484"/>
+        <line x1="330" y1="440" x2="346" y2="456"/>
+        <line x1="330" y1="500" x2="346" y2="484"/>
+      </g>
+    </g>
+    <g>
+      <circle cx="870" cy="470" r="78" fill="#0a0a0a"/>
+      <circle cx="870" cy="470" r="64" fill="url(#wheelShine)"/>
+      <circle cx="870" cy="470" r="42" fill="#1b1b1b"/>
+      <circle cx="870" cy="470" r="10" fill="#bdbdbd"/>
+      <g stroke="#9a9a9a" stroke-width="6" stroke-linecap="round" opacity="0.85">
+        <line x1="870" y1="428" x2="870" y2="452"/>
+        <line x1="912" y1="470" x2="888" y2="470"/>
+        <line x1="870" y1="512" x2="870" y2="488"/>
+        <line x1="828" y1="470" x2="852" y2="470"/>
+        <line x1="900" y1="440" x2="884" y2="456"/>
+        <line x1="900" y1="500" x2="884" y2="484"/>
+        <line x1="840" y1="440" x2="856" y2="456"/>
+        <line x1="840" y1="500" x2="856" y2="484"/>
+      </g>
+    </g>
+
+    <!-- wheel arches -->
+    <path d="M265 474
+             C 285 415, 330 386, 380 388
+             C 435 390, 475 426, 486 474"
+          fill="none" stroke="#5f0010" stroke-width="16" opacity="0.7"/>
+    <path d="M775 474
+             C 792 414, 840 386, 892 388
+             C 948 390, 990 428, 1000 474"
+          fill="none" stroke="#5f0010" stroke-width="16" opacity="0.7"/>
+
+    <!-- side skirt -->
+    <path d="M295 474
+             C 430 488, 760 488, 965 474
+             C 905 505, 350 505, 250 488
+             C 238 485, 252 474, 295 474 Z"
+          fill="#25060b" opacity="0.75"/>
+  </g>
+
+  <!-- small label -->
+  <text x="40" y="560" fill="#9fb3c7" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Arial" font-size="20" opacity="0.75">
+    test: red sports car (SVG)
+  </text>
+</svg>
